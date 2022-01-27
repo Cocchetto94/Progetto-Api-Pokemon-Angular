@@ -1,0 +1,34 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a href="#" class="navbar-item">
+            <h1 class="title.is-5">Pokemon App</h1>
+        </a>
+
+        <a href="#" role="button" aria-label="menu" aria-expanded="false" data-target="myNavbar" class="navbar-burger burger">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="navbar-menu" id="myNavbar">
+        <div class="navbar-start">
+            <a href="#" [routerLink]="'home'" class="navbar-item">Home</a>
+            <a href="#"  [routerLink]="'types'" class="navbar-item">Types</a>
+            
+            <a href="#"  [routerLink]="'search'" class="navbar-item">Search</a>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a href="#" *ngIf="!authService.isLoggedIn()" [routerLink]="'login'"  class="button is-primary">
+                        <strong>Log in</strong>
+                    </a>
+                    <a href="#" *ngIf="authService.isLoggedIn()" class="button is-primary" (click)="logout()">
+                        <strong>Logout</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

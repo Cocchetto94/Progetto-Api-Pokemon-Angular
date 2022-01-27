@@ -1,0 +1,16 @@
+<div class="section">
+   <div class="field">
+       <label for="" class="label">Username (<strong>user</strong>)</label>
+       <div class="control">
+           <input type="text" class="input" placeholder="user" #user>
+       </div>
+   </div>
+   <div class="field">
+    <label for="" class="label">Password (<strong>password</strong>)</label>
+    <div class="control">
+        <input type="password" class="input" #password>
+    </div>
+</div>
+<button class="button is-dark is-outlined" (click)="login(user.value, password.value)">Submit</button>
+</div>
+
